@@ -34,6 +34,7 @@ import { PassportModule } from '@nestjs/passport';
     JwtStrategy
   ],
   exports: [
+    'IAuthService'
   ]
 
 })

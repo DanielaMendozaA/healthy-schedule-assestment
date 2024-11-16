@@ -3,6 +3,11 @@ import { TypeOrmOptionsFactory, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { ConfigService } from '@nestjs/config';
 
 import { User } from "src/users/entities/user.entity";
+import { Doctor } from "src/doctors/entities/doctor.entity";
+import { Patient } from "src/patients/entities/patient.entity";
+import { Shift } from "src/shifts/entities/shift.entity";
+import { MedicalRecord } from "src/medical-records/entities/medical-record.entity";
+import { Appointment } from "src/appointments/entities/appointment.entity";
 
 
 @Injectable()
@@ -18,7 +23,7 @@ export class DatabaseConfigService implements TypeOrmOptionsFactory{
             password: this.configService.get<string>('DB_PASSWORD'),
             database: this.configService.get<string>('DATABASE_NAME'),
             synchronize: true,
-            entities: [User]
+            entities: [User, Doctor, Patient, Shift, MedicalRecord, Appointment]
 
         };  
     };
