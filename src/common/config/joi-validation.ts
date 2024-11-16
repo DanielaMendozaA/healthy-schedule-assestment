@@ -1,7 +1,7 @@
 import * as Joi from 'joi'
 
 export const JoiValidation = Joi.object({
-    PORT: Joi.number().required(),
+    PORT_DANY: Joi.number().required(),
     DB_PORT: Joi.number().required(),
     DB_HOST: Joi.string().required(),
     DB_USER: Joi.string().required(),
