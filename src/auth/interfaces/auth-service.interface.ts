@@ -9,7 +9,7 @@ export interface LoginResponse extends Partial<User> {
 
 
 export interface IAuthService{
-    register(createUserDto: CreateUserDto): Promise<Partial<User>>;
+    register(createUserDto: CreateUserDto): Promise<User>;
     login(loginUserDto : LoginUserDto) : Promise<LoginResponse>;
 
 }

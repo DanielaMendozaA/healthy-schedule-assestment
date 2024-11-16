@@ -54,7 +54,7 @@ export class AuthService implements IAuthService {
     }
     console.log(userResponse);
     
-    return userResponse
+    return createdUser
   }
 
   private hashingPassword(password: string) {

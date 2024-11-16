@@ -6,6 +6,11 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseConfigService } from './common/config/db-config';
 import { JoiValidation } from './common/config/joi-validation';
+import { AppointmentsModule } from './appointments/appointments.module';
+import { PatientsModule } from './patients/patients.module';
+import { DoctorsModule } from './doctors/doctors.module';
+import { MedicalRecordsModule } from './medical-records/medical-records.module';
+import { ShiftsModule } from './shifts/shifts.module';
 
 @Module({
   imports: [
@@ -21,7 +26,12 @@ import { JoiValidation } from './common/config/joi-validation';
     }),
     CommonModule,
     AuthModule,
-    UsersModule
+    UsersModule,
+    AppointmentsModule,
+    PatientsModule,
+    DoctorsModule,
+    MedicalRecordsModule,
+    ShiftsModule
   ],
   controllers: [],
   providers: [],
